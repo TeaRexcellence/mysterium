@@ -1,3 +1,4 @@
+<span style="color:gray">
 # MYSTERIUM CONSUMER NODE - Docker, Mysterium, Tequila API, Python
 
 Goal: Use "Mysterium Node" in Docker with the "Tequila API" with the goal of running Selenium and other Python scripts that can resedentially "ip-hop" as needed on the Mysterium Consumer Network.
@@ -107,3 +108,4 @@ docker exec -ti $containername_1 myst cli --agreed-terms-and-conditions
 ```
 Then re-check the balance again. If its still 0.000000 wait 5 minutes and try again. If it still doesnt show you prob did something wrong.
 
+</span>
