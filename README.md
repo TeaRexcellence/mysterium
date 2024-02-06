@@ -12,7 +12,7 @@ root folder named
 - Remember to add this to your .gitignore file.
 ```python
 # This is the password you use to login to your Mysterium account.
-Mysterium_PASSPHRASE="YOUR_MYSTERIUM_NODE_PASSWORD_GOES_HERE" 
+MYSTERIUM_PASSPHRASE="YOUR_MYSTERIUM_NODE_PASSWORD_GOES_HERE" 
 # This is the username you use to SET and login to your Tequila API.
 TEQUILAPI_USERNAME="ASSIGN_ANY_USERNAME_YOU_WANT_HERE"
 # This is the password you use to SET and login to your Tequila API.
