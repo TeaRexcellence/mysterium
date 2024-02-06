@@ -22,7 +22,7 @@ TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_NAME_YOU_WANT_HERE"
 <br>
 
 ### 3. Docker Compose:
-- Create a docker compose file called *docker-compose.yml* and place it in the *Mysterium* root folder.
+- Create a docker compose file called *docker-compose.yml* and place it in the */mysterium/* root folder.
 
 > /mysterium/docker-compose.yml 
 
