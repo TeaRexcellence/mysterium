@@ -48,7 +48,7 @@ services:
       - ./myst-data:/var/lib/Mysterium-node # Maps data storage # Maps the 'myst-data' directory from the host to '/var/lib/Mysterium-node' inside the container. This is where the Mysterium node stores its data.
  ```
 
-1. Open the `/*mysterium*/` root folder in the terminal and run the `docker-compose up -d` *command* to start the docker container.
+1. Open the `/mysterium/` root folder in the terminal and run the `docker-compose up -d` *command* to start the docker container.
 2. Check the new container is running with the `docker ps -a` *command*. If you're using docker desktop on windows you should also now see it under the "containers tab" in docker desktop.
 
 ### 4. Confirm Mysterium UI is now running through docker:
