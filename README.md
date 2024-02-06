@@ -4,12 +4,12 @@ Goal: Use "Mysterium Node" in docker with the "Tequila API" with the goal of run
 
 ### 1. Create Project Root:
 root folder named
-> **/mysterium*/
+> /mysterium/
 
 
 ### 2. Create .env file:
 - Create a local enviromental file called *.env* and place it in the *Mysterium* root folder.
-> */mysterium/*.env
+> /mysterium/.env
 - Remember to add this to your .gitignore file.
 ```python
 # This is the password you use to login to your Mysterium account.
@@ -24,7 +24,7 @@ TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_NAME_YOU_WANT_HERE"
 ### 3. Docker Compose:
 - Create a docker compose file called *docker-compose.yml* and place it in the *Mysterium* root folder.
 
-> */*Mysterium*/*docker-compose.yml* 
+> /Mysterium/docker-compose.yml* 
 
 ```yml
 version: '3.0' # Compose file version
