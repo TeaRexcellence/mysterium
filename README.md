@@ -91,6 +91,7 @@ After confirming the tokens have been sent correctly on the block explorer. Re-r
 
 Force refresh the balance:
 ```
-docker exec -ti $containername_1 myst cli --agreed-terms-and-conditions 
+docker exec -ti Docker_Container_ID_Goes_Here myst cli --agreed-terms-and-conditions 
+» identities balance 0x<REDACTED>
 ```
 Then re-check the balance again. If its still 0.000000 wait 5 minutes and try again. If it still doesnt show you prob did something wrong.
