@@ -75,7 +75,7 @@ You should now recieve the general output:
 [INFO] Channel address:0x000000000000000000000000000000000000000 #Omitted address with 0's
 [INFO] Balance: 0.000000
 ```
-- If you have a balance of 0.000000 you will need to fund your Mysterium node contract/wallet to be able to use Mysterium consumer services through the Tequila API. This is referenced by the *"Channel address"* in the output above, so we need to fund the *"Channel Address"* with the *$MYST* token on the *Polygon Network*.
+- If you have a balance of 0.000000 you will need to fund your Mysterium Node contract/wallet to be able to use Mysterium consumer services through the Tequila API. This is referenced by the *"Channel address"* in the output above, so we need to fund the *"Channel Address"* with the *$MYST* token on the *Polygon Network*.
 
 ## 7. Fund your Mysterium Node contract's channel address. 😱
 
