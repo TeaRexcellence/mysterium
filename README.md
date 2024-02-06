@@ -77,6 +77,11 @@ You should now recieve the general output:
 ```
 - If you have a balance of 0.000000 you will need to fund your Mysterium Node contract/wallet to be able to use Mysterium consumer services through the Tequila API. This is referenced by the *"Channel address"* in the output above, so we need to fund the *"Channel Address"* with the *$MYST* token on the *Polygon Network*.
 
+Altrnativly you can also use powershell and curl to check the status:
+```
+curl http://127.0.0.1:4050/identities/0xREDACTED | ConvertFrom-Json | ConvertTo-Json
+```
+
 ## 7. Fund your Mysterium Node contract's channel address. 😱
 
 On the Polygon network. Fund your Polygon wallet with the native *$MATIC* token. Then on Quickswap fund your wallet with *$MYST* by swapping *$MATIC > $MYST*.
