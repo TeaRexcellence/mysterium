@@ -59,8 +59,10 @@ If the docker container was installed correctly you should see the following scr
 Click *START* and begin the automatic onboarding process. When you are done the UI will provide you a password for accessing your Mysterium node. DO NOT LOSE THIS. You can change it in the next step.
 
 ### 5. Claim your node on mystnodes.com:
-- Once the Mysterium Node Dashboard has loaded - head over to the settings page by clicking the settings icon or visiting http://localhost:44449/#/settings. Find the `Claim on mystnodes.com` button on this settings page and click it to claim your node. You can also update the default password from the last step on this settings page.
+- Once the Mysterium Node Dashboard has loaded - head over to the settings page by clicking the settings icon or visiting http://localhost:44449/#/settings.
+
 <br><img src="./screenshots/screenie-2.png" style="max-width: 600px"/><br>
+Find the `Claim on mystnodes.com` button on this settings page and click it to claim your node. You can also update the default password from the last step on this settings page.
 
 ### 6. Query your myst account info:
 - First get the Mysterium node docker *CONTAINER ID* with the `docker ps -a` *command*.
