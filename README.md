@@ -21,7 +21,7 @@ TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_NAME_YOU_WANT_HERE"
 ```
 <br>
 
-### 3 Docker Compose:
+### 3. Docker Compose:
 - Create a docker compose file called *docker-compose.yml* and place it in the *Mysterium* root folder.
 
 > */*Mysterium*/*docker-compose.yml* 
@@ -77,7 +77,7 @@ You should now recieve the general output:
 ```
 - If you have a balance of 0.000000 you will need to fund your Mysterium node contract/wallet to be able to use Mysterium consumer services through the Tequila API. This is referenced by the *"Channel address"* in the output above, so we need to fund the *"Channel Address"* with the *$MYST* token on the *Polygon Network*.
 
-### 7 Fund your Mysterium Node contract's channel address.
+### 7. Fund your Mysterium Node contract's channel address.
 
 On the Polygon network. Fund your Polygon wallet with the native *$MATIC* token. Then on Quickswap fund your wallet with *$MYST* by swapping *$MATIC > $MYST*.
 
