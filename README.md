@@ -60,7 +60,6 @@ Click *START* and begin the automatic onboarding process. When you are done the 
 
 ### 5. Claim your node on mystnodes.com:
 - Once the Mysterium Node Dashboard has loaded - head over to the settings page by clicking the settings icon or visiting http://localhost:44449/#/settings.
-
 <br><img src="./screenshots/screenie-2.png" style="max-width: 600px"/><br>
 Find the `Claim on mystnodes.com` button on this settings page and click it to claim your node. You can also update the default password from the last step on this settings page.
 
