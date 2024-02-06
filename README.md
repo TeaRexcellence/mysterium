@@ -90,7 +90,7 @@ You should now recieve the general output:
 
 <br>
 
-## 7. Fund your Mysterium Node contract's channel address.
+## 7. Fund your Mysterium Node contract's channel address. 😱
 
 On the Polygon network. Fund your Polygon wallet with the native *$MATIC* token. Then on Quickswap fund your wallet with *$MYST* by swapping *$MATIC > $MYST*.
 
