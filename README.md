@@ -49,7 +49,7 @@ services:
  ```
 
 1. Open the `/mysterium/` root folder in the terminal and run the `docker-compose up -d` *command* to start the docker container.
-2. Check the new container is running with the `docker ps -a` *command*. If you're using docker desktop on windows you should also now see it under the "containers tab" in docker desktop.
+2. Check the new docker container is running with the `docker ps -a` *command*. If you're using docker desktop on windows you should also now see it under the "containers tab" in docker desktop.
 
 ### 4. Confirm Mysterium UI is now running through docker:
 1. Verify Mysterium is running correctly in the container by visitng the UI port at http://localhost:44449
