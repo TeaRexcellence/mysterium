@@ -9,7 +9,7 @@ root folder named
 
 ### 2. Create .env file:
 - Create a local enviromental file called *.env* and place it in the *Mysterium* root folder.
-> **/*mysterium*/*.env
+> */*mysterium*/*.env
 - Remember to add this to your .gitignore file.
 ```python
 # This is the password you use to login to your Mysterium account.
