@@ -52,8 +52,7 @@ services:
 2. Check the new docker container is running with the `docker ps -a` *command*. If you're using docker desktop on windows you should also now see it under the "containers tab" in docker desktop.
 
 ### 4. Confirm Mysterium UI is now running through docker:
-1. Verify Mysterium is running correctly in the container by visitng the UI port at http://localhost:44449
-
+- Verify Mysterium is running correctly in the container by visitng the UI port at http://localhost:44449 <br>
 If the docker container was installed correctly you should see the following screen:
 <br><img src="./screenshots/screenie-1.png" style="max-width: 600px"/><br>
 Click *START* and begin the automatic onboarding process. When you are done the UI will provide you a password for accessing your Mysterium node. DO NOT LOSE THIS. You can change it in the next step.
