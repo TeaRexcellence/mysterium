@@ -1,18 +1,15 @@
 # MYSTERIUM CONSUMER NODE - Docker, Mysterium, Tequila API, Python
 
-Goal: Use "Mysterium Node" in docker with the "Tequila API" with the goal of running Selenium and other Python scripts that can resedentially "ip-hop" as needed on the Mysterium Consumer Network.
-
-<br>
-
+Goal: Use "Mysterium Node" in Docker with the "Tequila API" with the goal of running Selenium and other Python scripts that can resedentially "ip-hop" as needed on the Mysterium Consumer Network.
 ---
 
-### 1. Create Project Root:
+## 1. Create Project Root:
 root folder named
 > `/mysterium/`
 
 <br>
 
-### 2. Create .env file:
+## 2. Create .env file:
 - Create a local enviromental file called *.env* and place it in the *Mysterium* root folder.
 > `/mysterium/.env`
 - Remember to add this to your .gitignore file.
@@ -26,7 +23,7 @@ TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_NAME_YOU_WANT_HERE"
 ```
 <br>
 
-### 3. Docker Compose:
+## 3. Docker Compose:
 - Create a docker compose file called *docker-compose.yml* and place it in the */mysterium/* root folder.
 
 > `/mysterium/docker-compose.yml`
@@ -58,7 +55,7 @@ services:
 
 <br>
 
-### 4. Confirm Mysterium UI is now running through docker:
+## 4. Confirm Mysterium UI is now running through docker:
 - Verify Mysterium is running correctly in the container by visitng the UI port at http://localhost:44449 <br>
 If the docker container was installed correctly you should see the following screen:
 
@@ -67,7 +64,7 @@ Click *START* and begin the automatic onboarding process. When you are done the 
 
 <br>
 
-### 5. Claim your node on mystnodes.com:
+## 5. Claim your node on mystnodes.com:
 - Once the Mysterium Node Dashboard has loaded - head over to the settings page by clicking the settings icon or visiting http://localhost:44449/#/settings.
 
 <img src="./screenshots/screenie-2.png" style="max-width: 600px"/><br>
@@ -75,7 +72,7 @@ Find the `Claim on mystnodes.com` button on this settings page and click it to c
 
 <br>
 
-### 6. Query your myst account info:
+## 6. Query your myst account info:
 - First get the Mysterium node docker *CONTAINER ID* with the `docker ps -a` *command*.
 
 - Then use the following command to check your myst account status and wallet balance: <br>
@@ -92,7 +89,7 @@ You should now recieve the general output:
 
 <br>
 
-### 7. Fund your Mysterium Node contract's channel address.
+## 7. Fund your Mysterium Node contract's channel address.
 
 On the Polygon network. Fund your Polygon wallet with the native *$MATIC* token. Then on Quickswap fund your wallet with *$MYST* by swapping *$MATIC > $MYST*.
 
