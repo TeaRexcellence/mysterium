@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  mysterium-proxy:
+    image: mysteriumnetwork/myst:latest
+    ports:
+      - 44449:44449
+      - 4050:4050
+      - 40001:40001
+    cap_add:
+      - NET_ADMIN
+    command: '--tequilapi.auth.username=${TEQUILAPI_USERNAME} --tequilapi.auth.password=${TEQUILAPI_PASSWORD} --tequilapi.address=0.0.0.0 --tequilapi.port=4050 --ui.port=44449 --proxymode daemon'
+    volumes:
+      - ./myst-data:/var/lib/mysterium-node
