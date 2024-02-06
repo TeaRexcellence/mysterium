@@ -1,7 +1,6 @@
 # MYSTERIUM CONSUMER NODE - Docker, Mysterium, Tequila API, Python
 
-Goal: To use Mysterium Node to connect to Tequila API and to run a Python script that interacts with Mysterium consumer level product to "resedential ip-hop" as needed in selenium and other python scripts.
-
+Goal: Use "Mysterium Node" in docker with the "Tequila API" with the goal of running selenium and other python script that can "ip-hop" as needed on Mysterium Consumer Network.
 
 ### 1. Create Project Root:
 root folder named
