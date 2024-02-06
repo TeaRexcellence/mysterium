@@ -12,11 +12,11 @@ root folder named
 - Remember to add this to your .gitignore file.
 ```python
 # This is the password you use to login to your Mysterium account.
-Mysterium_PASSPHRASE="YOUR_Mysterium_NODE_PASSWORD_GOES_HERE" 
+Mysterium_PASSPHRASE="YOUR_MYSTERIUM_NODE_PASSWORD_GOES_HERE" 
 # This is the username you use to SET and login to your Tequila API.
-TEQUILAPI_USERNAME="ASSIGN_ANY_USER_NAME_YOU_WANT_HERE"
+TEQUILAPI_USERNAME="ASSIGN_ANY_USERNAME_YOU_WANT_HERE"
 # This is the password you use to SET and login to your Tequila API.
-TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_NAME_YOU_WANT_HERE" 
+TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_YOU_WANT_HERE" 
 ```
 
 ## 3. Run Docker Compose:
