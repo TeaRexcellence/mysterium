@@ -65,7 +65,7 @@ Click *START* and begin the automatic onboarding process. When you are done the 
 
 <br>
 
-## 5. Claim your node on mystnodes.com:
+## 5. Claim your Mysterium Node on mystnodes.com:
 - Once the Mysterium Node Dashboard has loaded - head over to the settings page by clicking the settings icon or visiting http://localhost:44449/#/settings.
 
 <img src="./screenshots/screenie-2.png" style="max-width: 600px"/><br>
@@ -73,7 +73,7 @@ Find the `Claim on mystnodes.com` button on this settings page and click it to c
 
 <br>
 
-## 6. Query your myst account info:
+## 6. Query your Mysterium Node account info:
 - First get the Mysterium node docker *CONTAINER ID* with the `docker ps -a` *command*.
 
 - Then use the following command to check your myst account status and wallet balance: <br>
