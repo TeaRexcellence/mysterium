@@ -1,10 +1,6 @@
-# Mysterium, Tequila API, Docker, Python - CONSUMER NODE
+# MYSTERIUM CONSUMER NODE - Docker, Mysterium, Tequila API, Python
 
-## Dependencies
-- Install docker.
-- Install docker compose.
-- python duh
-----
+Goal: To use Mysterium Node to connect to Tequila API and to run a Python script that interacts with Mysterium consumer level product to "resedential ip-hop" as needed in selenium and other python scripts.
 
 
 ### 1. Create Project Root:
@@ -98,5 +94,5 @@ Force refresh the balance:
 ```
 docker exec -ti $containername_1 myst cli --agreed-terms-and-conditions 
 ```
-Then re-check the balance again. If its still 0.000000 you prob did something wrong.
+Then re-check the balance again. If its still 0.000000 wait 5 minutes and try again. If it still doesnt show you prob did something wrong.
 
