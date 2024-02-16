@@ -16,4 +16,4 @@ services:
     command: '--tequilapi.auth.username=${TEQUILAPI_USERNAME} --tequilapi.auth.password=${TEQUILAPI_PASSWORD} --tequilapi.address=0.0.0.0 --tequilapi.port=4050 --ui.port=44449 --proxymode daemon' # Specifies the command to execute when the container starts. This command starts the Mysterium node with specific parameters for the TequilAPI and the UI.
 
     volumes: # Mounts host paths or named volumes.
-      - ./myst-data:/var/lib/Mysterium-node # Maps data storage # Maps the 'myst-data' directory from the host to '/var/lib/Mysterium-node' inside the container. This is where the Mysterium node stores its data.
+      - ./myst-data:/var/lib/mysterium-node # Maps data storage # Maps the 'myst-data' directory from the host to '/var/lib/mysterium-node' inside the container. This is where the Mysterium node stores its data.
