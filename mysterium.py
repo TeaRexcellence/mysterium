@@ -1,48 +1,21 @@
-import requests
 import sys
 import os
 import inquirer
 import time
-import subprocess
-import multiprocessing
 from dotenv import load_dotenv
-from colorama import Fore, Style
-from requests.exceptions import ReadTimeout
+from requests_retry import retry_request
+import subprocess
 
 def check_docker_logs(docker_id):
     command = ["docker", "logs", "--follow", docker_id]
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    for line in iter(process.stdout.readline, b''):
-        line = line.decode('utf-8').strip()
-        print(Fore.GREEN + "Docker Log: " + Style.RESET_ALL + line)
-        if 'ERR' in line:
-            print("Error detected in Docker logs:")
-            print(line)
-            process.terminate()
-            os._exit(1)
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
-def retry_request(url, method, json=None, headers=None, max_retries=5):
-    for attempt in range(max_retries):
-        try:
-            if method == 'get':
-                response = requests.get(url, timeout=5)
-            elif method == 'put':
-                response = requests.put(url, json=json, headers=headers, timeout=5)
-            elif method == 'delete':
-                response = requests.delete(url, verify=False, timeout=5)
-            return response
-        except ReadTimeout:
-            print(f"Connection failed. Retrying attempt {attempt+1}...")
-            if attempt == max_retries - 1:
-                print("Max retries reached. Exiting.")
-                sys.exit(1)
-            time.sleep(2)
+    for line in iter(process.stdout.readline, b''):
+        print(line.decode(), end='')
 
 if __name__ == '__main__':
     load_dotenv()
     docker_id = os.getenv('DOCKER_ID')
-    docker_logs_process = multiprocessing.Process(target=check_docker_logs, args=(docker_id,))
-    docker_logs_process.start()
     passphrase = os.getenv('MYSTERIUM_PASSPHRASE')
     proxy_port = "40001"
     base_url = "http://127.0.0.1:4050"
@@ -104,16 +77,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"Error setting up the connection (Attempt {attempt+1}): {e}")
             print_errors = True
-    while True:
-        try:
-            get_response = retry_request(connection_url, 'get')
-            get_data = get_response.json()
-            if get_data['status'] != 'NotConnected':
-                print(f"Connection status: {get_data['status']}")
-                if get_data['status'] == 'NotConnected':
-                    print('Make sure your Mysterium Node Password is correct')
-                break
-        except ReadTimeout:
-            pass
-        time.sleep(6)
-    docker_logs_process.join()
+    check_docker_logs(docker_id)
