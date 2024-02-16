@@ -2,6 +2,8 @@
 
 Goal: Use "Mysterium Node" in Docker with the "Tequila API" with the goal of running Selenium and other Python scripts that can resedentially "ip-hop" as needed on the Mysterium Consumer Network.
 
+https://tequilapi.mysterium.network/#tag/Proposal
+
 ## 1. Create Project Root:
 root folder named
 > `/mysterium/`
@@ -28,9 +30,9 @@ TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_YOU_WANT_HERE"
 version: '3.0' # Compose file version
 
 services:
-  Mysterium-proxy: # Service name
+  mysterium-proxy: # Service name
     
-    image: Mysteriumnetwork/myst:latest # Docker image
+    image: mysteriumnetwork/myst:latest # Docker image
     
     ports: # Exposes ports to the host machine.
       - 44449:44449 # http://localhost:44449 - Mysterium Node UI access 
@@ -43,7 +45,7 @@ services:
     command: '--tequilapi.auth.username=${TEQUILAPI_USERNAME} --tequilapi.auth.password=${TEQUILAPI_PASSWORD} --tequilapi.address=0.0.0.0 --tequilapi.port=4050 --ui.port=44449 --proxymode daemon' # Specifies the command to execute when the container starts. This command starts the Mysterium node with specific parameters for the TequilAPI and the UI.
 
     volumes: # Mounts host paths or named volumes.
-      - ./myst-data:/var/lib/Mysterium-node # Maps data storage # Maps the 'myst-data' directory from the host to '/var/lib/Mysterium-node' inside the container. This is where the Mysterium node stores its data.
+      - ./myst-data:/var/lib/mysterium-node # Maps data storage # Maps the 'myst-data' directory from the host to '/var/lib/Mysterium-node' inside the container. This is where the Mysterium node stores its data.
  ```
 
 1. Open the `/mysterium/` root folder in the terminal and run the `docker-compose up -d` *command* to start the docker container.
