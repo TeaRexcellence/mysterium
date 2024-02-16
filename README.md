@@ -18,7 +18,9 @@ MYSTERIUM_PASSPHRASE="YOUR_MYSTERIUM_NODE_PASSWORD_GOES_HERE"
 # This is the username you use to SET and login to your Tequila API.
 TEQUILAPI_USERNAME="ASSIGN_ANY_USERNAME_YOU_WANT_HERE"
 # This is the password you use to SET and login to your Tequila API.
-TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_YOU_WANT_HERE" 
+TEQUILAPI_PASSWORD="ASSIGN_ANY_SECURE_PASSWORD_YOU_WANT_HERE"\
+# After creating your docker container, get its id and add to the .env file.
+DOCKER_ID="3f09855aaae6"
 ```
 
 ## 3. Run Docker Compose:

@@ -9,8 +9,8 @@ from dotenv import load_dotenv
 from colorama import Fore, Style
 from requests.exceptions import ReadTimeout
 
-def check_docker_logs():
-    command = ["docker", "logs", "--follow", "3f09855aaae6"]
+def check_docker_logs(docker_id):
+    command = ["docker", "logs", "--follow", docker_id]
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     for line in iter(process.stdout.readline, b''):
         line = line.decode('utf-8').strip()
@@ -36,12 +36,13 @@ def retry_request(url, method, json=None, headers=None, max_retries=5):
             if attempt == max_retries - 1:
                 print("Max retries reached. Exiting.")
                 sys.exit(1)
-        time.sleep(2)
+            time.sleep(2)
 
 if __name__ == '__main__':
-    docker_logs_process = multiprocessing.Process(target=check_docker_logs)
-    docker_logs_process.start()
     load_dotenv()
+    docker_id = os.getenv('DOCKER_ID')
+    docker_logs_process = multiprocessing.Process(target=check_docker_logs, args=(docker_id,))
+    docker_logs_process.start()
     passphrase = os.getenv('MYSTERIUM_PASSPHRASE')
     proxy_port = "40001"
     base_url = "http://127.0.0.1:4050"
@@ -83,7 +84,7 @@ if __name__ == '__main__':
             if attempt == 4:
                 print("Failed to select provider after multiple attempts.")
                 sys.exit(1)
-        time.sleep(2)
+            time.sleep(2)
     retry_request(connection_url, 'delete')
     print("Any existing connection has been stopped.")
     connection_data = {
@@ -111,7 +112,7 @@ if __name__ == '__main__':
                 print(f"Connection status: {get_data['status']}")
                 if get_data['status'] == 'NotConnected':
                     print('Make sure your Mysterium Node Password is correct')
-                    break
+                break
         except ReadTimeout:
             pass
         time.sleep(6)
