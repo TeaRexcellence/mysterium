@@ -1,3 +1,11 @@
+## Quick notes:
+`docker-compose up -d` <br>
+`docker ps -a` <br>
+LOG INTO NODE IN BROWSER: http://localhost:44449 <br>
+`docker exec -ti Docker_Container_ID_Goes_Here myst account info`
+
+-----
+<br><br>
 # MYSTERIUM CONSUMER NODE - Docker, Mysterium, Tequila API, Python
 
 Goal: Use "Mysterium Node" in Docker with the "Tequila API" with the goal of running Selenium and other Python scripts that can resedentially "ip-hop" as needed on the Mysterium Consumer Network.

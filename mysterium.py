@@ -35,7 +35,11 @@ if __name__ == '__main__':
     proposals_response = retry_request(proposals_url, 'get')
     proposals_data = proposals_response.json()
     providers = [(proposal['provider_id'], proposal['location']['country']) for proposal in proposals_data.get('proposals', []) if 'location' in proposal]
-    choices = [f"{provider_id} ({country})" for provider_id, country in providers]
+    
+    # Organize and order the providers by region alphabetically but put all (US) options at the top.
+    us_providers = sorted([f"{provider_id} ({country})" for provider_id, country in providers if country == 'US'])
+    other_providers = sorted([f"{provider_id} ({country})" for provider_id, country in providers if country != 'US'])
+    choices = us_providers + other_providers
 
     questions = [
         inquirer.List('choice',
@@ -79,4 +83,4 @@ if __name__ == '__main__':
             print(f"Error setting up the connection (Attempt {attempt+1}): {e}")
             print_errors = True
 
-    check_docker_logs(SHOW_INF=True, SHOW_DBG=True, SHOW_DEBUG=True, SHOW_ERR=True, LOG_HISTORY=False)
+    check_docker_logs(SHOW_INF=True, SHOW_DBG=True, SHOW_DEBUG=True, SHOW_ERR=True, SHOW_WRN=True, LOG_HISTORY=False, CONCATENATE_WARNINGS=True)
