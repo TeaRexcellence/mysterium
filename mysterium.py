@@ -83,8 +83,4 @@ if __name__ == '__main__':
             print(f"Error setting up the connection (Attempt {attempt+1}): {e}")
             print_errors = True
 
-<<<<<<< Updated upstream
     check_docker_logs(SHOW_INF=True, SHOW_DBG=True, SHOW_DEBUG=True, SHOW_ERR=True, SHOW_WRN=True, LOG_HISTORY=False, CONCATENATE_WARNINGS=True)
-=======
-    check_docker_logs(SHOW_INF=True, SHOW_DBG=False, SHOW_DEBUG=True, SHOW_ERR=True, SHOW_WRN=True, LOG_HISTORY=False, CONCATENATE_WARNINGS=True)
->>>>>>> Stashed changes
