@@ -56,8 +56,8 @@ def check_docker_logs(SHOW_INF=True, SHOW_DBG=True, SHOW_DEBUG=True, SHOW_ERR=Tr
                     wrn_count = 0
                     # Reset log line
                     log_line = f"{Fore.LIGHTBLUE_EX}🐋 {service_name} ~ {Style.RESET_ALL}"
-                    time.sleep(5)  # wait for 5 seconds before restarting the function
-                    break  # Break the loop and restart the function
+                    time.sleep(8)  # wait for 8 seconds before restarting the function
+                    break  # Break the inner loop and process the remaining logs in the buffer
                 else:
                     # Update counters and print counts
                     if CONCATENATE_WARNINGS:
@@ -114,7 +114,7 @@ def check_docker_logs(SHOW_INF=True, SHOW_DBG=True, SHOW_DEBUG=True, SHOW_ERR=Tr
                     print("\r" + log_line, end='', flush=True)
 
             else:
-                # If the loop completed without break (no ERR found), exit the function
+                # If the inner loop completed without break (no ERR found), continue to the next line
                 continue  # Continue to the next line
 
             break  # An ERR was found, restart the function
