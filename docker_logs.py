@@ -4,7 +4,7 @@ import os
 import time
 import re
 import sys
-
+#lol
 load_dotenv()
 docker_id = os.getenv('DOCKER_ID')
 
